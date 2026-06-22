@@ -698,6 +698,73 @@ input.console__slider::-moz-range-thumb{
 .project__footnote a{ color:var(--gold); }
 .project__footnote a:hover{ text-decoration:underline; }
 
+.project__links{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid var(--hairline);
+}
+.project__link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--font-mono);
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.04em;
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid var(--hairline);
+  color:var(--paper-dim);
+  transition:border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease);
+}
+.project__link:hover{
+  transform:translateY(-2px);
+}
+.project__link--demo{
+  background:var(--gold-soft);
+  border-color:rgba(217,164,65,.35);
+  color:var(--gold);
+}
+.project__link--demo:hover{
+  background:var(--gold);
+  color:var(--ink);
+  border-color:var(--gold);
+}
+.project__link--github{
+  background:var(--panel-soft);
+}
+.project__link--github:hover{
+  border-color:var(--paper-dim);
+  color:var(--paper);
+}
+.project__link-icon{ font-size:.85rem; line-height:1; }
+
+.btn-resume{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.04em;
+  padding:9px 16px;
+  border-radius:8px;
+  border:1px solid var(--hairline);
+  color:var(--paper-dim);
+  background:var(--panel-soft);
+  transition:border-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+  white-space:nowrap;
+}
+.btn-resume:hover{
+  border-color:var(--paper-dim);
+  color:var(--paper);
+  transform:translateY(-1px);
+}
+
 /* sentiment demo */
 .sentiment__filters{
   display:flex;
@@ -1013,6 +1080,7 @@ footer a:hover{ color:var(--gold); }
       <a href="#contact" data-nav>Contact</a>
     </div>
     <div class="nav__cta">
+      <a href="Vedant_Kadve_Resume.pdf" download="Vedant_Kadve_Resume.pdf" class="btn-resume">↓ Resume</a>
       <a href="https://github.com/vedantk2809" target="_blank" rel="noopener" class="btn btn-ghost">GitHub <span class="btn-arrow">↗</span></a>
       <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
     </div>
@@ -1224,7 +1292,10 @@ footer a:hover{ color:var(--gold); }
         <li>Found that a simultaneous device and location change multiplies fraud probability <b>6.2×</b> (6.94% → 42.78%); threshold optimisation at <b>0.22</b> achieved 100% fraud recall and an estimated <b>₹6.27M</b> net benefit.</li>
         <li>Designed the 4-tier action framework above and deployed the scoring engine as an interactive Streamlit app.</li>
       </ul>
-      <p class="project__footnote">→ <a href="#console">Try the live threshold demo</a></p>
+      <div class="project__links">
+        <a href="#console" class="project__link project__link--demo"><span class="project__link-icon">▶</span> Live Demo</a>
+        <a href="https://github.com/vedantk2809/fraud-detection" target="_blank" rel="noopener" class="project__link project__link--github"><span class="project__link-icon">⌥</span> GitHub</a>
+      </div>
     </article>
 
     <!-- Project 2: Sentiment Analysis -->
@@ -1281,6 +1352,9 @@ footer a:hover{ color:var(--gold); }
         </div>
       </div>
       <p class="sentiment__caption">Illustrative samples written to demonstrate the three-way classification, not raw outputs from the original dataset.</p>
+      <div class="project__links">
+        <a href="https://github.com/vedantk2809/sentiment-analysis" target="_blank" rel="noopener" class="project__link project__link--github"><span class="project__link-icon">⌥</span> GitHub</a>
+      </div>
     </article>
 
     <!-- Project 3: Retail Forecasting -->
@@ -1315,6 +1389,9 @@ footer a:hover{ color:var(--gold); }
             fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <p class="forecast__caption">Illustrative monthly demand curve — actual vs. forecast shape, not exact dataset values.</p>
+      </div>
+      <div class="project__links">
+        <a href="https://github.com/vedantk2809/retail-forecasting" target="_blank" rel="noopener" class="project__link project__link--github"><span class="project__link-icon">⌥</span> GitHub</a>
       </div>
     </article>
   </div>
